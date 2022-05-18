@@ -1,14 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+
 const ProductItem = ({ product }) => {
+
+  const userLink = () => {
+    return (
+      <>
+        <Link href={`product/${product._id}`}>
+          <a className="btn btn-info m-1 flex-fill">View</a>
+        </Link>
+        <button className="btn btn-success m-1 flex-fill">
+          Buy
+        </button>
+      </>
+    )
+  }
 
   return (
     <div className="card" style={{ width: '18rem' }}>
       <img src={product.images[0].url} alt={product.images[0].url} className="card-img-top" />
       <div className="card-body">
-        <h5 className="card-title" title={product.tittle} >
-          {product.tittle}
+        <h5 className="card-title text-capitalize" title={product.title} >
+          {product.title}
         </h5>
-        <div className="row justify-content-between">
+        <div className="row justify-content-between mx-0">
           <h6 className="text-danger">${product.price}</h6>
           {
             product.inStock > 0
@@ -19,7 +34,10 @@ const ProductItem = ({ product }) => {
         <p className="card-text" title={product.description}>
           {product.description}
         </p>
-        <a href="#" className="btn btn-primary">Go somewhere</a>
+
+        <div className="row justify-content-between mx-0">
+          {userLink()}
+        </div>
       </div>
     </div>
   );
