@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose'
 
 const productSchema = new mongoose.Schema({
   title: {
@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: true,
+    required: true
   },
   content: {
     type: String,
@@ -40,9 +40,8 @@ const productSchema = new mongoose.Schema({
     default: 0
   }
 }, {
-  timestamps: true,
-});
+  timestamps: true
+})
 
-let Dataset = mongoose.models.product || mongoose.model("product", productSchema);
-
-export default Dataset;
+let Dataset = mongoose.models.product || mongoose.model('product', productSchema)
+export default Dataset
