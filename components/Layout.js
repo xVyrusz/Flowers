@@ -3,7 +3,7 @@ import Notify from "./Notify"
 
 const Layout = ({ children }) => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-0">
       <NavBar />
       <Notify />
       {children}

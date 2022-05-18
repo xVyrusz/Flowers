@@ -44,7 +44,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
+      <div className="container">
         <Link href="/">
           <a className="navbar-brand">Tienda Flores</a>
         </Link>
