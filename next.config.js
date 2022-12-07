@@ -9,7 +9,7 @@ const nextConfig = {
     "PAYPAL_CLIENT_ID": "AWoSBP1xkiu5S39QlJ7tS3bbTslJX5SvVD1G-7aNikdfJaiAbVEC933udpvPF8wwLV3CEwN4LORBNszr"
   },
   headers: [
-    { key: "Access-Control-Allow-Origin", value: "https://flowers2.vercel.app/api/" },
+    { key: "Access-Control-Allow-Origin", value: "https://flowers-drab.vercel.app/" },
   ],
 }
 
